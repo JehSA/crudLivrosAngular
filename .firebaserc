@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "livros-18fed": {
+      "hosting": {
+        "livros": [
+          "livros-18fed"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "livros-18fed"
+  }
+}

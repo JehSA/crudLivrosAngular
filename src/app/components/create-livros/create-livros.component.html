@@ -1,0 +1,29 @@
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3>{{ tituloPagina }}
+            <div *ngIf="loading" class="spinner-border" role="status" style="float: right">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </h3>
+          <span *ngIf="submitted && createLivro.invalid" class="badge bg-warning text-dark">TODOS OS CAMPOS SÃO OBRIGATÓRIOS</span>
+          <form class="mt-3" [formGroup]="createLivro" (ngSubmit)="adicionarEditarLivro()">
+            <div class="row">
+            <input type="text" class="form-control form-control-lg mt-3" formControlName="autor" placeholder="Autor">
+            <input type="text" class="form-control form-control-lg mt-3" formControlName="titulo" placeholder="Título">
+            <input type="text" class="form-control form-control-lg mt-3" formControlName="editora" placeholder="Editora">
+            <!-- input type="text-area" class="form-control form-control-lg mt-3" placeholder="Sinopse"-->
+            <textarea class="form-control form-control-lg mt-3" rows="4" cols="50" maxlength="500" style="resize:none" formControlName=sinopse placeholder="Sinopse"></textarea>
+            </div>
+            <div class="mt-3">
+              <button type="text" class="btn btn-secondary btn-lg" routerLink="/list-livros">Voltar</button>
+              <button type="submit" class="btn btn-dark btn-lg" style="margin-left:4px">Adicionar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
